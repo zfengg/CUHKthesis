@@ -1,18 +1,27 @@
 %!TEX TS-program = xelatex
+% CUHKthesis @ https://github.com/zfengg/CUHKthesis
+%
+%	A simple tex template for the thesis at CUHK.
+%
+% Author: Zhou Feng @ 15/12/2022
+% ---------------------------------------------------------------------------- %
+%                                   preamble                                   %
+% ---------------------------------------------------------------------------- %
 \documentclass[12pt]{report}
-% --------------------------------- preamble --------------------------------- %
+% ---------------------------- settings & commands --------------------------- %
 \input{preamble/settings.tex}
 \input{preamble/cmds.tex}
 \input{preamble/usrcmds.tex}
+% ----------------------------------- misc ----------------------------------- %
 
 % ----------------------------------- info ----------------------------------- %
-\title{Thesis title}
+\title{THESIS TITLE}
 \titlezh{中文标题}
 \author{LAST, First}
 \degree{Doctor of Philosophy}
 \programme{Mathematics}
 \institution{The Chinese University of Hong Kong}
-\date{December \the\year}
+\date{December 2022}
 \committee{%
 	Professor LAST First (Chair)\\
 	Professor ZHANG San (Thesis Supervisor)\\
@@ -25,7 +34,7 @@
 %                                   document                                   %
 % ---------------------------------------------------------------------------- %
 \begin{document}
-% ------------ titlepage, abstract, acknowledgement, toc, lof, lot ----------- %
+% -------------------------------- first pages ------------------------------- %
 \maketitle % titlepage
 
 \pagenumbering{Roman}
@@ -41,12 +50,12 @@
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
-\listoffigures % list of figures
+\listoffigures % lof
 
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\listtablename}
-\listoftables % list of tables
+\listoftables % lot
 
 % ------------------------------- main chapters ------------------------------ %
 \clearpage
