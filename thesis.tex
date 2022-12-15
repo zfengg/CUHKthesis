@@ -1,0 +1,70 @@
+%!TEX TS-program = xelatex
+\documentclass[12pt]{report}
+% --------------------------------- preamble --------------------------------- %
+\input{preamble/settings.tex}
+\input{preamble/cmds.tex}
+\input{preamble/usrcmds.tex}
+
+% ----------------------------------- info ----------------------------------- %
+\title{Thesis title}
+\titlezh{中文标题}
+\author{LAST, First}
+\degree{Doctor of Philosophy}
+\programme{Mathematics}
+\institution{The Chinese University of Hong Kong}
+\date{December \the\year}
+\committee{%
+	Professor LAST First (Chair)\\
+	Professor ZHANG San (Thesis Supervisor)\\
+	Professor LI Si (Thesis Co-supervisor)\\
+	Professor WANG Wu (Committee Member)\\
+	Professor ZHAO Liu (External Examiner)%
+}
+
+% ---------------------------------------------------------------------------- %
+%                                   document                                   %
+% ---------------------------------------------------------------------------- %
+\begin{document}
+% ------------ titlepage, abstract, acknowledgement, toc, lof, lot ----------- %
+\maketitle % titlepage
+
+\pagenumbering{Roman}
+\setcounter{page}{0}
+
+\makeabstract % english abstract
+\makeabstractChinese % chinese abstract
+
+\makeacknowledgement % acknowledgement 
+
+\tableofcontents % toc
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures % list of figures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables % list of tables
+
+% ------------------------------- main chapters ------------------------------ %
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\include{chapters/chp1-introduction.tex}
+\include{chapters/chp2-preliminaries.tex}
+\include{chapters/chp3-proof.tex}
+\include{chapters/chp4-applications.tex}
+
+% --------------------------------- appendix --------------------------------- %
+\appendix
+\include{appendices/appx-A.tex}
+
+% ------------------------------- bibliography ------------------------------- %
+% \bibliographystyle{reference/bst/myplainnat.bst}
+\bibliographystyle{plain}
+\bibliography{reference/reference.bib}
+
+\end{document}

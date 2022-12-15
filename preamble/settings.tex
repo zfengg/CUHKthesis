@@ -1,0 +1,138 @@
+% !TEX root = ../thesis.tex
+% packages
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage[shortlabels,inline]{enumitem}
+
+% figure
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+
+% layout
+\footskip 4.ex
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[a4paper,inner=4cm,outer=2.5cm]{geometry}
+
+% Chinese
+\usepackage[scheme=plain]{ctex}
+%\usepackage{xeCJK} % Chinese via xelatex
+%\setCJKmainfont{SimSun}
+% \setCJKsansfont{SimSun}
+% \setCJKmonofont{SimSun}
+
+% ------------------------------ reference style ----------------------------- %
+\usepackage[numbers,sort]{natbib} 	% automatically sort the citations
+%\renewcommand\bibname{Bibliography}
+
+% ------------------------------ footer & header ----------------------------- %
+% \usepackage{fancyhdr}
+% % def headstyles
+% \newcommand{\headstyle}{%
+% 	\fancyhead[L]{}
+% 	\fancyhead[C]{}
+% 	\fancyhead[R]{}
+% }
+% % def footstyles
+% \makeatletter
+% \newcommand{\footstyle}{%
+% 	\fancyfoot[L]{}
+% 	\fancyfoot[C]{\thepage}
+% 	\fancyfoot[R]{}
+% }
+% \newcommand{\authorfootstyle}{%
+% 	\fancyfoot[L]{}
+% 	\fancyfoot[C]{\thepage}
+% 	\fancyfoot[R]{}
+% }
+% \makeatother
+% % set global pagestyle
+% \pagestyle{fancy}
+% \fancyhf{} % clear the orginal headfoot style
+% \headstyle
+% \footstyle
+% % def first-page pagestyle
+% \fancypagestyle{firstpage}{%
+% 	\fancyhf{}
+% 	\headstyle
+% 	\authorfootstyle
+% }
+% % def main pagestyle
+% \fancypagestyle{main}{%
+% 	\fancyhf{}
+% 	\headstyle
+% 	\footstyle
+% }
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand{\headrule}{\rule{\textwidth}{0.4pt}}
+
+% appendix
+\usepackage{appendix}
+
+% -------------------------- hyperlinks & bookmarks -------------------------- %
+\usepackage{aliascnt} %  \autoref
+\usepackage[pdfusetitle,
+bookmarks=true,
+pagebackref,
+colorlinks,
+linkcolor=blue,
+citecolor=blue,
+urlcolor=blue]{hyperref}
+
+% ------------------------------- environments ------------------------------- %
+\usepackage{amsthm}
+\newtheorem{dummy}{***}[section]
+
+\theoremstyle{plain}
+\newaliascnt{theorem}{dummy}
+\newtheorem{theorem}[theorem]{Theorem}
+\aliascntresetthe{theorem}
+\providecommand*{\theoremautorefname}{Theorem}
+\newaliascnt{proposition}{dummy}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\providecommand*{\propositionautorefname}{Proposition}
+\newaliascnt{corollary}{dummy}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\providecommand*{\corollaryautorefname}{Corollary}
+\newaliascnt{lemma}{dummy}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\providecommand*{\lemmaautorefname}{Lemma}
+\newaliascnt{conjecture}{dummy}
+\newtheorem{conjecture}[conjecture]{Conjecture}
+\aliascntresetthe{conjecture}
+\providecommand*{\conjectureautorefname}{Conjecture}
+
+\theoremstyle{definition}
+\newaliascnt{definition}{dummy}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\providecommand*{\definitionautorefname}{Definition}
+\newaliascnt{example}{dummy}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+\providecommand*{\exampleautorefname}{Example}
+
+\theoremstyle{remark}
+\newaliascnt{remark}{dummy}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\providecommand*{\remarkautorefname}{Remark}
+
+\newtheorem{exercise}{Exercise}[section]
+\providecommand*{\exerciseautorefname}{Exercise}
+
+% ---------------------------------- autoref --------------------------------- %
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chapter}
+%\renewcommand{\equationautorefname}{Equation}
+
+% ------------------------------------ misc ----------------------------------- %
+\allowdisplaybreaks

@@ -1,0 +1,82 @@
+% !TEX root = ../thesis.tex
+\makeatletter
+% ----------------------------------- info ----------------------------------- %
+\newcommand{\titlezh}[1]{\gdef\@titlezh{#1}}%
+\newcommand{\@titlezh}{\@latex@warning@no@line{No \noexpand\titlezh given}}
+\newcommand{\degree}[1]{\gdef\@degree{#1}}%
+\newcommand{\@degree}{\@latex@warning@no@line{No \noexpand\degree given}}
+\newcommand{\programme}[1]{\gdef\@programme{#1}}%
+\newcommand{\@programme}{\@latex@warning@no@line{No \noexpand\programme given}}
+\newcommand{\institution}[1]{\gdef\@institution{#1}}%
+\newcommand{\@institution}{\@latex@warning@no@line{No \noexpand\institution given}}
+\newcommand{\committee}[1]{\gdef\@committee{#1}}%
+\newcommand{\@committee}{\@latex@warning@no@line{No \noexpand\committee given}}
+
+% ----------------------------------- pages ---------------------------------- %
+% coverpage
+\renewcommand{\maketitle}{%
+	\thispagestyle{empty}
+	\pdfbookmark{Titlepage}{titlepage}
+	\vspace*{5mm}
+	\begin{center}
+	\Large{ \bf \@title}
+	\end{center}
+	\vspace*{20mm}
+	
+	\begin{center}
+	\@author
+	\end{center}
+	\vspace*{20mm}
+
+	\begin{center}
+	A Thesis Submitted in Partial Fulfilment \\
+	of the Requirements for the Degree of \\
+	\@degree \\
+	in \\
+	\@programme
+	\end{center}
+	\vspace*{20mm}
+
+	\begin{center}
+	\@institution \\
+	\@date
+	\end{center}
+
+	\clearpage
+	\thispagestyle{empty}
+	\vspace*{60mm}
+	\begin{center}
+		\underline{Thesis Assessment Committee}\\
+		\vspace{5mm}
+		\@committee
+	\end{center}
+	\vspace*{50mm}
+}
+
+% abstract: english
+\newcommand{\makeabstract}{%
+	\chapter*{Abstract}
+	\addcontentsline{toc}{chapter}{Abstract}
+%	\vspace{0.5cm}
+	\input{pages/abstract.tex}
+	\clearpage
+}
+
+% abstract: chinese
+\newcommand{\makeabstractChinese}{%
+	\chapter*{摘要}
+	\addcontentsline{toc}{chapter}{摘要}
+%	\vspace{0.5cm}
+	\input{pages/abstract-zh.tex}
+	\clearpage
+}
+
+% acknowledgement
+\newcommand{\makeacknowledgement}{%
+	\chapter*{Acknowledgement}
+	\addcontentsline{toc}{chapter}{Acknowledgement}
+	\input{pages/acknowledgement.tex}
+	\clearpage
+}
+
+\makeatother
