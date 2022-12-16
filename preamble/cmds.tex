@@ -79,4 +79,22 @@
 	\clearpage
 }
 
+% update toc
+\newcommand{\addloftotoc}{%
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listfigurename}
+}
+
+\newcommand{\addlottotoc}{%
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listtablename}
+}
+
+\newcommand{\addbibtotoc}{%
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\bibname}
+}
+
 \makeatother

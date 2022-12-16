@@ -47,14 +47,10 @@
 
 \tableofcontents % toc
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\listfigurename}
+\addloftotoc
 \listoffigures % lof
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{\listtablename}
+\addlottotoc
 \listoftables % lot
 
 % ------------------------------- main chapters ------------------------------ %
@@ -74,6 +70,7 @@
 % ------------------------------- bibliography ------------------------------- %
 % \bibliographystyle{reference/bst/myplainnat.bst}
 \bibliographystyle{plain}
+\addbibtotoc
 \bibliography{reference/reference.bib}
 
 \end{document}
